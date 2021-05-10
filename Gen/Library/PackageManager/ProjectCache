@@ -1,6 +1,6 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: F:/Egor/Gen/Gen/Packages/manifest.json
+    m_FilePath: F:/Gen/Gen/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -8,7 +8,7 @@ m_ProjectFiles:
       ticks: 637562437889524520
     m_Hash: 2428941319
   m_LockFileStatus:
-    m_FilePath: F:/Egor/Gen/Gen/Packages/packages-lock.json
+    m_FilePath: F:/Gen/Gen/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
@@ -126,7 +126,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.7.1
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.ads@3.7.1
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.ads@3.7.1
       assetPath: Packages/com.unity.ads
       name: com.unity.ads
       displayName: Advertisement
@@ -260,7 +260,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.5.3
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.analytics@3.5.3
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.analytics@3.5.3
       assetPath: Packages/com.unity.analytics
       name: com.unity.analytics
       displayName: Analytics Library
@@ -384,7 +384,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.3.9
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.collab-proxy@1.3.9
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.collab-proxy@1.3.9
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -481,7 +481,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.ide.rider@2.0.7
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
       displayName: JetBrains Rider Editor
@@ -520,6 +520,8 @@ m_PackageAssets:
         - 3.0.2
         - 3.0.3
         - 3.0.4
+        - 3.0.5
+        - 3.0.6
         compatible:
         - 1.0.2
         - 1.0.6
@@ -543,6 +545,8 @@ m_PackageAssets:
         - 3.0.2
         - 3.0.3
         - 3.0.4
+        - 3.0.5
+        - 3.0.6
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -582,7 +586,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.ide.visualstudio@2.0.7
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.ide.visualstudio@2.0.7
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -663,7 +667,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.ide.vscode@1.2.3
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -732,7 +736,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.2
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.purchasing@3.0.2
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.purchasing@3.0.2
       assetPath: Packages/com.unity.purchasing
       name: com.unity.purchasing
       displayName: In App Purchasing
@@ -890,7 +894,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.1.24
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.test-framework@1.1.24
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.test-framework@1.1.24
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -965,12 +969,12 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637505702940000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/com.unity.test-framework.git
+        url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
         revision: e6fe8892689398c0d9aba4587e0ba69edc3d82b8
         path: 
     - packageId: com.unity.textmeshpro@3.0.1
@@ -978,7 +982,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.1
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.textmeshpro@3.0.1
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.textmeshpro@3.0.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -1137,7 +1141,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.7
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.timeline@1.4.7
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.timeline@1.4.7
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -1198,6 +1202,7 @@ m_PackageAssets:
         - 1.4.5
         - 1.4.6
         - 1.4.7
+        - 1.4.8
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -1208,9 +1213,14 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
+        - 1.5.4
+        - 1.5.5
         - 1.6.0-pre.1
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
         compatible:
         - 1.4.7
+        - 1.4.8
         - 1.5.0-pre.2
         - 1.5.0-preview.1
         - 1.5.0-preview.2
@@ -1221,8 +1231,12 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
+        - 1.5.4
+        - 1.5.5
         - 1.6.0-pre.1
-        verified: 1.4.7
+        - 1.6.0-pre.3
+        - 1.6.0-pre.4
+        verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
         version: 1.0.0
@@ -1259,7 +1273,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637516874380000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -1335,7 +1349,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.1.7
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.7
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.7
       assetPath: Packages/com.unity.xr.legacyinputhelpers
       name: com.unity.xr.legacyinputhelpers
       displayName: XR Legacy Input Helpers
@@ -3169,7 +3183,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: F:\Egor\Gen\Gen\Library\PackageCache\com.unity.ext.nunit@1.0.6
+      resolvedPath: F:\Gen\Gen\Library\PackageCache\com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -3227,5 +3241,5 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: F:/Egor/Gen/Gen/Packages
+m_ProjectPath: F:/Gen/Gen/Packages
 m_EditorVersion: 2020.3.7f1 (dd97f2c94397)

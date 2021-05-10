@@ -35,7 +35,6 @@ public class Health : MonoBehaviour
         healthT.text = "Health: " + health + "/" + maxHealth;
         if (health <= 0)
         {
-            Debug.Log("<0!");
             Destroy(Player);
         }
     }

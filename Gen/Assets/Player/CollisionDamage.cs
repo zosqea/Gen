@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class CollisionDamage : MonoBehaviour
 {
-    public int collisionDamage = 10;
+    public int damage = 10;
     public string collisionTag;
-    public GameObject player;
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == collisionTag)
         {
-            Health health = player.GetComponent<Health>();
-            health.TakeHit(collisionDamage);
+            Health health = collision.gameObject.GetComponent<Health>();
+            health.TakeHit(damage);
         }
     }
 }
