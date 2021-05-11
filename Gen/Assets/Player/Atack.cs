@@ -5,16 +5,7 @@ using UnityEngine;
 public class Atack : MonoBehaviour
 {
     public GameObject AtackArea;
-    public string mobTag;
-    public int damage;
-    private void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.tag == mobTag)
-        {
-            Health health = col.gameObject.GetComponent<Health>();
-            health.TakeHit(damage);
-        }
-    }
+    public GameObject mob;
     void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0))
@@ -23,7 +14,11 @@ public class Atack : MonoBehaviour
         }
         else
         {
-            AtackArea.SetActive(false);
+            //AtackArea.SetActive(false);
+        }
+        if (Input.GetKey(KeyCode.B))
+        {
+            mob.GetComponent<Health>().TakeHit(1);
         }
     }
 }
