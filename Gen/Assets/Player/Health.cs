@@ -11,18 +11,10 @@ public class Health : MonoBehaviour
     public int maxHealth;
     public GameObject Player;
     public string CollisionTag;
-    public int damage;
 
     private void Start()
     {
         StartCoroutine("addHealth");
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == CollisionTag)
-        {
-            TakeHit(damage);
-        }
     }
     IEnumerator addHealth()
     {

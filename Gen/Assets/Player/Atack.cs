@@ -5,20 +5,41 @@ using UnityEngine;
 public class Atack : MonoBehaviour
 {
     public GameObject AtackArea;
-    public GameObject mob;
+    public bool Time = true;
+    public int a = 0;
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && Time)
         {
             AtackArea.SetActive(true);
+            Time = false;
+            StartCoroutine("AtackTime");
         }
         else
         {
-            //AtackArea.SetActive(false);
+            AtackArea.SetActive(false);
         }
-        if (Input.GetKey(KeyCode.B))
+        if (Time == false)
         {
-            mob.GetComponent<Health>().TakeHit(1);
+            
+        }
+    }
+    IEnumerator AtackTime()
+    {
+        while (true)
+        {
+            a++;
+            ATime();
+            yield return new WaitForSeconds(1F);
+        }
+    }
+    private void ATime()
+    {
+        if (a==2)
+        {
+            Time = true;
+            StopCoroutine("AtackTime");
+            a = 0;
         }
     }
 }

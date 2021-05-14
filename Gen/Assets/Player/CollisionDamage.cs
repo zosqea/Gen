@@ -11,9 +11,7 @@ public class CollisionDamage : MonoBehaviour
     {
         if (collision.gameObject.tag == collisionTag)
         {
-            Health health = collision.gameObject.GetComponent<Health>();
-            Debug.Log("Error");
-            gameObject.GetComponent<Health>().TakeHit(damage);
+            collision.gameObject.GetComponent<Health>().TakeHit(damage);
         }
     }
 }
