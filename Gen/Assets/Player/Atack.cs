@@ -1,41 +1,63 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Atack : MonoBehaviour
 {
     public GameObject AtackArea;
-    //public bool Time = true;
-    //public int a = 2;
-    void Update()
+    public GameObject TAttack;
+    public Slider slider;
+    private bool Time = true;
+    private int a = 50;
+    private bool StartTime = false;
+    void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Mouse0)/* && Time*/)
+        if (!Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.Mouse0))
         {
-            AtackArea.SetActive(true);
-            //Time = false;
-            //StartCoroutine("AtackTime");
+            if (Time)
+            {
+                AtackArea.SetActive(true);
+                Time = false;
+                StartTime = true;
+            }
         }
         else
         {
             AtackArea.SetActive(false);
         }
-        /*if (Time == false)
+        if (StartTime)
         {
-            
+            a--;
+            TAttack.SetActive(true);
+            if (a == 0)
+            {
+                StartTime = false;
+                Time = true;
+                a=50;
+            }
         }
-        if (a==0)
+        else
         {
-            Time = true;
-            StopAllCoroutines();
-            a = 2;
-        }*/
+            TAttack.SetActive(false);
+        }
     }
-    /*IEnumerator AtackTime()
+    private void Start()
     {
-        while (true)
-        {
-            a-=1;
-            yield return new WaitForSeconds(1F);
-        }
-    }*/
+        SetMaxHealt(50);
+    }
+    private void Update()
+    {
+        SetHealth(a);
+    }
+
+    public void SetMaxHealt(int AtackTime)
+    {
+        slider.maxValue = AtackTime;
+        slider.value = AtackTime;
+    }
+    public void SetHealth(int AtackTime)
+    {
+        slider.value = AtackTime;
+    }
 }

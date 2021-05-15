@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -37,7 +38,8 @@ public class Health : MonoBehaviour
         healthT.text = "Health: " + health + "/" + maxHealth;
         if (health <= 0)
         {
-            Destroy(Player);
+            SceneManager.LoadScene(0);
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
     
