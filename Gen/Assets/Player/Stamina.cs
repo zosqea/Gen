@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Stamina : MonoBehaviour
 {
     
     public int stamina;
-    public Text staminaT;
+    public TextMeshProUGUI staminaT;
     public int maxStamina;
     public GameObject player;
     public bool trafficU = false;
