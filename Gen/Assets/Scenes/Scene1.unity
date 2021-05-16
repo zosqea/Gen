@@ -1491,9 +1491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ecf951138e7c1418a772fa10d6a256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1445977504}
-  slider: {fileID: 0}
-  obj: {fileID: 0}
 --- !u!1 &878236512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,6 +1503,7 @@ GameObject:
   - component: {fileID: 878236516}
   - component: {fileID: 878236515}
   - component: {fileID: 878236514}
+  - component: {fileID: 878236517}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1594,6 +1592,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &878236517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878236512}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910d0a64ac4fb7e4e84b8f43599f4e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 797935523}
+  HealthBarMob: {fileID: 878236513}
+  speedRotation: 1000
 --- !u!1 &913118653
 GameObject:
   m_ObjectHideFlags: 0
