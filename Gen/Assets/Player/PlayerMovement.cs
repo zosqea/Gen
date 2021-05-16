@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    public GameObject menu;
+    public GameObject plC;
 
     public Transform groundCheck;
     public float groundDistance = 0.4F;
@@ -25,12 +27,30 @@ public class PlayerMovement : MonoBehaviour
     }
     void Start()
     {
-        
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (menu.activeSelf == false)
+            {
+                Time.timeScale = 0;
+                Cursor.lockState = CursorLockMode.Confined;
+                menu.SetActive(true);
+                plC.SetActive(false);
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Time.timeScale = 1;
+                menu.SetActive(false);
+                plC.SetActive(true);
+            }
+        }
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)

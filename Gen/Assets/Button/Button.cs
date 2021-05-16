@@ -9,8 +9,16 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    public void Exit()
+    public void ClickSettings()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void ClickExit()
     {
         Application.Quit();
+    }
+    public void ClickMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
