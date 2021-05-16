@@ -38,8 +38,15 @@ public class Health : MonoBehaviour
         healthT.text = "Health: " + health + "/" + maxHealth;
         if (health <= 0)
         {
-            SceneManager.LoadScene(0);
-            Cursor.lockState = CursorLockMode.Confined;
+            if (gameObject.tag == "Player")
+            {
+                SceneManager.LoadScene(0);
+                Cursor.lockState = CursorLockMode.Confined;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
     
