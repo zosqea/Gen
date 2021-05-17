@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        healthT.text = "Health: " + health + "/" + maxHealth;
+        healthT.text = health + "/" + maxHealth;
         if (health <= 0)
         {
             if (gameObject.tag == "Player")

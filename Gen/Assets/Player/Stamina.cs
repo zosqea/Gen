@@ -52,7 +52,7 @@ public class Stamina : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        staminaT.text = "Stamina: " + stamina + "/" + maxStamina;
+        staminaT.text = stamina + "/" + maxStamina;
         if (Input.GetKey(KeyCode.LeftShift) && stamina > 0)
         {
             PlayerMovement Speed = player.GetComponent<PlayerMovement>();

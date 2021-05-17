@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3f;
     public GameObject menu;
     public GameObject plC;
+    public GameObject settingsMenu;
 
     public Transform groundCheck;
     public float groundDistance = 0.4F;
@@ -35,12 +36,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (menu.activeSelf == false)
+            if (menu.activeSelf == false && settingsMenu.activeSelf == false)
             {
                 Time.timeScale = 0;
                 Cursor.lockState = CursorLockMode.Confined;
                 menu.SetActive(true);
                 plC.SetActive(false);
+            }
+            else if(settingsMenu.activeSelf == true)
+            {
+                settingsMenu.SetActive(false);
+                menu.SetActive(true);
             }
             else
             {
