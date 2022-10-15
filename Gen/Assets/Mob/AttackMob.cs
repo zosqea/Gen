@@ -4,35 +4,27 @@ using UnityEngine;
 
 public class AttackMob : MonoBehaviour
 {
-    public Transform player;
-    private bool Time = true;
-    private int a = 50;
-    public GameObject AtackArea;
-    private bool StartTime = false;
-    void FixedUpdate()
+    public GameObject attackArea;
+    private bool cD = false;
+    public void Start()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) >= 1.5)
+        StartCoroutine(attack());
+    }
+    public IEnumerator attack()
+    {
+        while (true)
         {
-            if (Time)
+            if (!cD)
             {
-                AtackArea.SetActive(true);
-                Time = false;
-                StartTime = true;
+                attackArea.SetActive(true);
+                cD = true;
             }
             else
             {
-                AtackArea.SetActive(false);
+                attackArea.SetActive(false);
+                cD = false;
             }
-        }
-        if (StartTime)
-        {
-            a--;
-            if (a == 0)
-            {
-                StartTime = false;
-                Time = true;
-                a=50;
-            }
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }
