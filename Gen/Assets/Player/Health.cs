@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
     }
     private void addHt()
     {
-        if (health < maxHealth)
+        if (health < maxHealth && !gameObject.GetComponent<BattleMode>().battleModeTrue)
         {
             health++;
         }

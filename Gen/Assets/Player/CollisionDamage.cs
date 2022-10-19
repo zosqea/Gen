@@ -11,7 +11,7 @@ public class CollisionDamage : MonoBehaviour
         if (collision.gameObject.tag == collisionTag)
         {
             collision.gameObject.GetComponent<Health>().TakeHit(damage);
-            //yield return new WaitForSeconds(1);   
+            collision.gameObject.GetComponent<BattleMode>().startBattleMode();
         }
     }
 }

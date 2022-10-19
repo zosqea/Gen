@@ -50,10 +50,15 @@ public class Stamina : MonoBehaviour
             }
         }
     }
+    public void attackUnStamina()
+    {
+        stamina-=10;
+    }
     private void FixedUpdate()
     {
+        
         staminaT.text = stamina + "/" + maxStamina;
-        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0)
+        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0 && !gameObject.GetComponent<BattleMode>().battleModeTrue)
         {
             PlayerMovement Speed = player.GetComponent<PlayerMovement>();
             Speed.SpeedU(2);
