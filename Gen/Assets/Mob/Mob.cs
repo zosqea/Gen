@@ -18,7 +18,7 @@ public class Mob : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, player.transform.position) < dist)
         {
-            if (Vector3.Distance(transform.position, player.transform.position) > 1)
+            if (Vector3.Distance(transform.position, player.transform.position) > 4)
             {
                 Vector3 Rotation = player.position - mob.position;
                 mob.rotation = Quaternion.Slerp(mob.rotation, Quaternion.LookRotation(Rotation), speedRotation*Time.deltaTime);
