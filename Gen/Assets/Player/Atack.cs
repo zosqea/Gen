@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Atack : MonoBehaviour
 {
-    public GameObject AtackArea;
-    public GameObject TAttack;
-    public Slider slider;
+    public GameObject atackAreaObject;
+    public GameObject attckBarObject;
+    public Image attackTime;
     private bool Time = true;
     private int a = 50;
     private bool StartTime = false;
@@ -18,20 +18,19 @@ public class Atack : MonoBehaviour
             if (Time)
             {
                 gameObject.GetComponent<Stamina>().attackUnStamina();
-                gameObject.GetComponent<BattleMode>().startBattleMode();
-                AtackArea.SetActive(true);
+                atackAreaObject.SetActive(true);
                 Time = false;
                 StartTime = true;
             }
         }
         else
         {
-            AtackArea.SetActive(false);
+            atackAreaObject.SetActive(false);
         }
         if (StartTime)
         {
             a--;
-            TAttack.SetActive(true);
+            attckBarObject.SetActive(true);
             if (a == 0)
             {
                 StartTime = false;
@@ -41,25 +40,16 @@ public class Atack : MonoBehaviour
         }
         else
         {
-            TAttack.SetActive(false);
+            attckBarObject.SetActive(false);
         }
-    }
-    private void Start()
-    {
-        SetMaxHealt(50);
     }
     private void Update()
     {
         SetHealth(a);
     }
-
-    public void SetMaxHealt(int AtackTime)
+    public void SetHealth(float AtackTime)
     {
-        slider.maxValue = AtackTime;
-        slider.value = AtackTime;
-    }
-    public void SetHealth(int AtackTime)
-    {
-        slider.value = AtackTime;
+        
+        attackTime.fillAmount = AtackTime/50f;
     }
 }

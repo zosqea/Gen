@@ -12,6 +12,7 @@ public class CollisionDamage : MonoBehaviour
         {
             collision.gameObject.GetComponent<Health>().TakeHit(damage);
             collision.gameObject.GetComponent<BattleMode>().startBattleMode();
+            gameObject.GetComponentInParent<BattleMode>().startBattleMode();
         }
     }
 }

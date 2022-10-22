@@ -8,7 +8,7 @@ public class Stamina : MonoBehaviour
 {
     
     public int stamina;
-    public TextMeshProUGUI staminaT;
+    public TextMeshProUGUI staminaText;
     public int maxStamina;
     public GameObject player;
     public bool trafficU = false;
@@ -57,7 +57,7 @@ public class Stamina : MonoBehaviour
     private void FixedUpdate()
     {
         
-        staminaT.text = stamina + "/" + maxStamina;
+        staminaText.text = stamina + "/" + maxStamina;
         if (Input.GetKey(KeyCode.LeftShift) && stamina > 0 && !gameObject.GetComponent<BattleMode>().battleModeTrue)
         {
             PlayerMovement Speed = player.GetComponent<PlayerMovement>();
