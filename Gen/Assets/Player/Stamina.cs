@@ -58,7 +58,7 @@ public class Stamina : MonoBehaviour
     {
         
         staminaText.text = stamina + "/" + maxStamina;
-        if (Input.GetKey(KeyCode.LeftShift) && stamina > 0 && !gameObject.GetComponent<BattleMode>().battleModeTrue)
+        if (Input.GetKey(KeyCode.LeftShift) & (Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.S)) & stamina > 0 & !gameObject.GetComponent<BattleMode>().battleModeTrue)
         {
             PlayerMovement Speed = player.GetComponent<PlayerMovement>();
             Speed.SpeedU(2);

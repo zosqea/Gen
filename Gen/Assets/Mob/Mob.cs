@@ -23,13 +23,13 @@ public class Mob : MonoBehaviour
                 Vector3 Rotation = player.position - mob.position;
                 mob.rotation = Quaternion.Slerp(mob.rotation, Quaternion.LookRotation(Rotation), speedRotation*Time.deltaTime);
                 mob.transform.position += mob.forward*speedMove*Time.deltaTime;
-                mob.transform.localPosition = new Vector3(transform.position.x,0.5f, transform.position.z);
-                mob.transform.localRotation = new Quaternion(0f, transform.rotation.y,0f, transform.rotation.w);
-                Debug.Log("Должен приближаться");
+                mob.transform.localPosition = new Vector3(transform.position.x, transform.position.y + 0.00001f, transform.position.z);
+                mob.transform.localRotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
+                //Debug.Log("Должен приближаться");
             }
             else
             {
-                Debug.Log("Не до лжен приближаться");
+                //Debug.Log("Не до лжен приближаться");
             }
         }
         else
@@ -39,8 +39,8 @@ public class Mob : MonoBehaviour
                 Vector3 Rotation = spawn.position - mob.position;
                 mob.rotation = Quaternion.Slerp(mob.rotation, Quaternion.LookRotation(Rotation), speedRotation*Time.deltaTime);
                 mob.transform.position += mob.forward*speedMove*Time.deltaTime;
-                mob.transform.localPosition = new Vector3(transform.position.x,0.5f, transform.position.z);
-                mob.transform.localRotation = new Quaternion(0f, transform.rotation.y,0f, transform.rotation.w);
+                mob.transform.localPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                mob.transform.localRotation = new Quaternion(transform.rotation.x, transform.rotation.y + 0.00001f, transform.rotation.z, transform.rotation.w);
             }
         }
     }
