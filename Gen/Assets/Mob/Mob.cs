@@ -23,7 +23,7 @@ public class Mob : MonoBehaviour
                 Vector3 Rotation = player.position - mob.position;
                 mob.rotation = Quaternion.Slerp(mob.rotation, Quaternion.LookRotation(Rotation), speedRotation*Time.deltaTime);
                 mob.transform.position += mob.forward*speedMove*Time.deltaTime;
-                mob.transform.localPosition = new Vector3(transform.position.x, transform.position.y + 0.0001f, transform.position.z);
+                mob.transform.localPosition = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
                 mob.transform.localRotation = new Quaternion(transform.rotation.x, transform.rotation.y, 0f, transform.rotation.w);
                 //Debug.Log("Должен приближаться");
             }
